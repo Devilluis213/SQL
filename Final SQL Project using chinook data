@@ -1,0 +1,17 @@
+#1 What customers are only from Brazil?
+
+SELECT *
+FROM chinook.customers
+WHERE country like '%Brazil%'
+
+#2 What are the total sales for 2009?
+
+SELECT InvoiceDate, Sum(Total) As TotalSales
+FROM chinook.invoices
+WHERE invoicedate like '%2009%'
+
+#3 How many Invoices were there in 2009?
+
+SELECT COUNT(*)
+FROM chinook.invoices
+WHERE InvoiceDate like '%2009%'
