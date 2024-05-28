@@ -1,0 +1,28 @@
+How many ramen brands are from Japan?;
+
+SELECT Count(Brand),
+Style,
+Country
+FROM BIT_DB.Ramen
+Where Country Like '%Japan%';
+
+How many ramen from Japan have a rating of 5?
+
+SELECT Country, 
+Brand,
+Stars
+FROM BIT_DB.Ramen
+WHERE Country Like '%Japan%'
+HAVING Stars > 5
+ORDER BY Stars DESC
+LIMIT 50;
+
+How many brands in Japan are in the Top Ten?
+
+SELECT Country, 
+Brand,
+"Top Ten"
+FROM BIT_DB.Ramen
+WHERE Country like '%Japan%'
+ORDER BY "Top Ten" DESC
+LIMIT 6;
