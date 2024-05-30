@@ -1,0 +1,20 @@
+#1 What movies have a rating of 18+?
+
+SELECT "Movie Name", "Year of Release", "Maturity Rating"
+FROM BIT_DB."Amazon Prime Movies"
+WHERE "Maturity Rating" Like '%18+%';
+
+#2 What movies have a imdb rating of 8 and higher?
+
+SELECT "Movie Name", "IMDb Rating", "Year of Release"
+FROM BIT_DB."Amazon Prime Movies"
+WHERE "IMDb Rating" >= '8'
+ORDER BY "IMDb Rating" ASC
+LIMIT 452;
+
+#3 What movies have a running time of 2 1/2 hours or higher?
+
+SELECT "Movie Name", "Running Time", "Year of Release"
+FROM BIT_DB."Amazon Prime Movies"
+WHERE "Running Time" BETWEEN '2 h 30 min' AND '4 h'
+ORDER BY "Running Time" ASC;
