@@ -1,0 +1,18 @@
+#1 What's the avaregae salary of a data scientist?
+
+SELECT title, AVG(salary)
+FROM BIT_DB.DataScientistSalaries
+WHERE title='Data Scientist';
+
+#2 What company industries has the top salaries in Texas?
+
+SELECT company_industry, salary, location 
+FROM BIT_DB.DataScientistSalaries
+WHERE location like '%TX%'
+ORDER BY salary ASC;
+
+#3 How many data scientist have PhD as their education?
+
+SELECT title, education 
+FROM BIT_DB.DataScientistSalaries
+WHERE education = 'PhD'
